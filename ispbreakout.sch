@@ -1,0 +1,392 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "ISPxUART breakout"
+Date ""
+Rev "__gitid__"
+Comp "Two Bears s.r.o."
+Comment1 "Radek Hladík"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even JISP1
+U 1 1 5F3ECF4F
+P 1450 1600
+F 0 "JISP1" H 1500 1917 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 1500 1400 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x03_P2.54mm_Horizontal" H 1450 1600 50  0001 C CNN
+F 3 "~" H 1450 1600 50  0001 C CNN
+	1    1450 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even JISP2
+U 1 1 5F3ED8AF
+P 9100 1750
+F 0 "JISP2" H 9150 2067 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 9150 1976 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Horizontal" H 9100 1750 50  0001 C CNN
+F 3 "~" H 9100 1750 50  0001 C CNN
+	1    9100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male JUART1
+U 1 1 5F3EE571
+P 8600 2950
+F 0 "JUART1" H 8708 3231 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 8708 3140 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 8600 2950 50  0001 C CNN
+F 3 "~" H 8600 2950 50  0001 C CNN
+	1    8600 2950
+	1    0    0    -1  
+$EndComp
+Text GLabel 1100 1500 0    50   Input ~ 0
+MISO-RX1_IN
+Text GLabel 1100 1600 0    50   Input ~ 0
+SCK_IN
+Text GLabel 1100 1700 0    50   Input ~ 0
+RESET_IN
+Text GLabel 2050 1600 2    50   Input ~ 0
+MOSI-TX1_IN
+$Comp
+L power:GND #PWR0101
+U 1 1 5F3EF202
+P 2050 1700
+F 0 "#PWR0101" H 2050 1450 50  0001 C CNN
+F 1 "GND" H 2055 1527 50  0000 C CNN
+F 2 "" H 2050 1700 50  0001 C CNN
+F 3 "" H 2050 1700 50  0001 C CNN
+	1    2050 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5F3EF6BD
+P 2050 1500
+F 0 "#PWR0102" H 2050 1350 50  0001 C CNN
+F 1 "VCC" H 2065 1673 50  0000 C CNN
+F 2 "" H 2050 1500 50  0001 C CNN
+F 3 "" H 2050 1500 50  0001 C CNN
+	1    2050 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1700 1750 1700
+Wire Wire Line
+	2050 1600 1750 1600
+Wire Wire Line
+	2050 1500 1900 1500
+Wire Wire Line
+	1250 1500 1100 1500
+Wire Wire Line
+	1250 1600 1100 1600
+Wire Wire Line
+	1100 1700 1250 1700
+Text GLabel 9800 1750 2    50   Input ~ 0
+MOSI-TX1_OUT
+Wire Wire Line
+	9800 1750 9400 1750
+$Comp
+L power:GND #PWR0103
+U 1 1 5F3F27DC
+P 9800 1850
+F 0 "#PWR0103" H 9800 1600 50  0001 C CNN
+F 1 "GND" H 9805 1677 50  0000 C CNN
+F 2 "" H 9800 1850 50  0001 C CNN
+F 3 "" H 9800 1850 50  0001 C CNN
+	1    9800 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 1850 9600 1850
+Text GLabel 8650 1650 0    50   Input ~ 0
+MISO-RX1_OUT
+Text GLabel 8650 1750 0    50   Input ~ 0
+SCK_OUT
+Text GLabel 8650 1850 0    50   Input ~ 0
+RESET_OUT
+Text GLabel 9800 1650 2    50   Input ~ 0
+ISPVCC
+Wire Wire Line
+	9800 1650 9400 1650
+Wire Wire Line
+	8900 1650 8650 1650
+Wire Wire Line
+	8900 1750 8650 1750
+Wire Wire Line
+	8900 1850 8650 1850
+Text GLabel 3750 1300 0    50   Input ~ 0
+SCK_IN
+Text GLabel 3750 1500 0    50   Input ~ 0
+RESET_IN
+Text GLabel 4100 1500 2    50   Input ~ 0
+RESET_OUT
+Text GLabel 4100 1300 2    50   Input ~ 0
+SCK_OUT
+Wire Wire Line
+	3750 1300 4100 1300
+Wire Wire Line
+	4100 1500 3750 1500
+Text GLabel 9100 2950 2    50   Input ~ 0
+RX_OUT
+$Comp
+L power:GND #PWR0104
+U 1 1 5F3F9AB9
+P 9100 3150
+F 0 "#PWR0104" H 9100 2900 50  0001 C CNN
+F 1 "GND" H 9105 2977 50  0000 C CNN
+F 2 "" H 9100 3150 50  0001 C CNN
+F 3 "" H 9100 3150 50  0001 C CNN
+	1    9100 3150
+	1    0    0    -1  
+$EndComp
+Text GLabel 9100 3050 2    50   Input ~ 0
+TX_OUT
+Text GLabel 9100 2850 2    50   Input ~ 0
+UARTVCC
+Wire Wire Line
+	9100 2850 8800 2850
+Wire Wire Line
+	9100 2950 8800 2950
+Wire Wire Line
+	9100 3050 8800 3050
+Wire Wire Line
+	9100 3150 8800 3150
+$Comp
+L K3-2235D-F1:K3-2235D-F1 SUART1
+U 1 1 5F3FB208
+P 5700 1400
+F 0 "SUART1" H 6100 1665 50  0000 C CNN
+F 1 "K3-2235D-F1" H 6100 1574 50  0000 C CNN
+F 2 "K32235DF1" H 6350 1500 50  0001 L CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Korean-Hroparts-Elec-K3-2235D-F1_C189615.pdf" H 6350 1400 50  0001 L CNN
+F 4 "9.1*3.5mm Toggle Switches RoHS" H 6350 1300 50  0001 L CNN "Description"
+F 5 "3.7" H 6350 1200 50  0001 L CNN "Height"
+F 6 "Korean Hroparts Elec" H 6350 1100 50  0001 L CNN "Manufacturer_Name"
+F 7 "K3-2235D-F1" H 6350 1000 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "K3-2235D-F1" H 6350 900 50  0001 L CNN "Arrow Part Number"
+F 9 "" H 6350 800 50  0001 L CNN "Arrow Price/Stock"
+F 10 "" H 6350 700 50  0001 L CNN "Mouser Part Number"
+F 11 "" H 6350 600 50  0001 L CNN "Mouser Price/Stock"
+	1    5700 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L K3-2235D-F1:K3-2235D-F1 SISP1
+U 1 1 5F3FBBDB
+P 5700 2350
+F 0 "SISP1" H 6100 2615 50  0000 C CNN
+F 1 "K3-2235D-F1" H 6100 2524 50  0000 C CNN
+F 2 "K32235DF1" H 6350 2450 50  0001 L CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Korean-Hroparts-Elec-K3-2235D-F1_C189615.pdf" H 6350 2350 50  0001 L CNN
+F 4 "9.1*3.5mm Toggle Switches RoHS" H 6350 2250 50  0001 L CNN "Description"
+F 5 "3.7" H 6350 2150 50  0001 L CNN "Height"
+F 6 "Korean Hroparts Elec" H 6350 2050 50  0001 L CNN "Manufacturer_Name"
+F 7 "K3-2235D-F1" H 6350 1950 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "K3-2235D-F1" H 6350 1850 50  0001 L CNN "Arrow Part Number"
+F 9 "" H 6350 1750 50  0001 L CNN "Arrow Price/Stock"
+F 10 "" H 6350 1650 50  0001 L CNN "Mouser Part Number"
+F 11 "" H 6350 1550 50  0001 L CNN "Mouser Price/Stock"
+	1    5700 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L K3-2235D-F1:K3-2235D-F1 SPOWER1
+U 1 1 5F3FC19F
+P 5700 3350
+F 0 "SPOWER1" H 6100 3615 50  0000 C CNN
+F 1 "K3-2235D-F1" H 6100 3524 50  0000 C CNN
+F 2 "K32235DF1" H 6350 3450 50  0001 L CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Korean-Hroparts-Elec-K3-2235D-F1_C189615.pdf" H 6350 3350 50  0001 L CNN
+F 4 "9.1*3.5mm Toggle Switches RoHS" H 6350 3250 50  0001 L CNN "Description"
+F 5 "3.7" H 6350 3150 50  0001 L CNN "Height"
+F 6 "Korean Hroparts Elec" H 6350 3050 50  0001 L CNN "Manufacturer_Name"
+F 7 "K3-2235D-F1" H 6350 2950 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "K3-2235D-F1" H 6350 2850 50  0001 L CNN "Arrow Part Number"
+F 9 "" H 6350 2750 50  0001 L CNN "Arrow Price/Stock"
+F 10 "" H 6350 2650 50  0001 L CNN "Mouser Part Number"
+F 11 "" H 6350 2550 50  0001 L CNN "Mouser Price/Stock"
+	1    5700 3350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6500 3550
+NoConn ~ 6500 3450
+NoConn ~ 6500 3350
+Text GLabel 5500 3200 0    50   Input ~ 0
+ISPVCC
+Text GLabel 5500 3650 0    50   Input ~ 0
+UARTVCC
+$Comp
+L power:VCC #PWR0105
+U 1 1 5F4007A9
+P 5200 3450
+F 0 "#PWR0105" H 5200 3300 50  0001 C CNN
+F 1 "VCC" H 5100 3500 50  0000 C CNN
+F 2 "" H 5200 3450 50  0001 C CNN
+F 3 "" H 5200 3450 50  0001 C CNN
+	1    5200 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3450 5700 3450
+Wire Wire Line
+	5700 3350 5600 3350
+Wire Wire Line
+	5600 3350 5600 3200
+Wire Wire Line
+	5600 3200 5500 3200
+Wire Wire Line
+	5700 3550 5600 3550
+Wire Wire Line
+	5600 3550 5600 3650
+Wire Wire Line
+	5600 3650 5500 3650
+Text GLabel 6650 2450 2    50   Input ~ 0
+MOSI-TX1_IN
+Text GLabel 5500 2450 0    50   Input ~ 0
+MISO-RX1_IN
+Text GLabel 5500 2550 0    50   Input ~ 0
+MISO-RX1_OUT
+Text GLabel 6650 2550 2    50   Input ~ 0
+MOSI-TX1_OUT
+Text GLabel 5550 1500 0    50   Input ~ 0
+MISO-RX1_IN
+Text GLabel 6650 1500 2    50   Input ~ 0
+MOSI-TX1_IN
+Text GLabel 5550 1400 0    50   Input ~ 0
+RX_OUT
+Text GLabel 6650 1400 2    50   Input ~ 0
+TX_OUT
+NoConn ~ 6500 1600
+NoConn ~ 5700 1600
+Wire Wire Line
+	5700 1500 5550 1500
+Wire Wire Line
+	5700 1400 5550 1400
+Wire Wire Line
+	6500 1400 6650 1400
+Wire Wire Line
+	6500 1500 6650 1500
+Wire Wire Line
+	6500 2450 6650 2450
+Wire Wire Line
+	6500 2550 6650 2550
+Wire Wire Line
+	5700 2550 5500 2550
+Wire Wire Line
+	5700 2450 5500 2450
+NoConn ~ 6500 2350
+NoConn ~ 5700 2350
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5F40E17B
+P 1900 1500
+F 0 "#FLG0101" H 1900 1575 50  0001 C CNN
+F 1 "PWR_FLAG" H 1900 1673 50  0001 C CNN
+F 2 "" H 1900 1500 50  0001 C CNN
+F 3 "~" H 1900 1500 50  0001 C CNN
+	1    1900 1500
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 1500
+Wire Wire Line
+	1900 1500 1750 1500
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5F40E780
+P 9600 1850
+F 0 "#FLG0102" H 9600 1925 50  0001 C CNN
+F 1 "PWR_FLAG" H 9600 2023 50  0001 C CNN
+F 2 "" H 9600 1850 50  0001 C CNN
+F 3 "~" H 9600 1850 50  0001 C CNN
+	1    9600 1850
+	-1   0    0    1   
+$EndComp
+Connection ~ 9600 1850
+Wire Wire Line
+	9600 1850 9400 1850
+Text GLabel 3250 2350 0    50   Input ~ 0
+RESET_IN
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5F594047
+P 3650 2350
+F 0 "SW1" H 3650 2635 50  0000 C CNN
+F 1 "SW_Push_Dual" H 3650 2544 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 3650 2550 50  0001 C CNN
+F 3 "~" H 3650 2550 50  0001 C CNN
+	1    3650 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5F5A2171
+P 4000 2350
+F 0 "#PWR01" H 4000 2100 50  0001 C CNN
+F 1 "GND" H 4005 2177 50  0000 C CNN
+F 2 "" H 4000 2350 50  0001 C CNN
+F 3 "" H 4000 2350 50  0001 C CNN
+	1    4000 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2350 3850 2350
+Wire Wire Line
+	3250 2350 3450 2350
+$Comp
+L power:VCC #PWR02
+U 1 1 5F5F4C4A
+P 7300 3350
+F 0 "#PWR02" H 7300 3200 50  0001 C CNN
+F 1 "VCC" H 7200 3400 50  0000 C CNN
+F 2 "" H 7300 3350 50  0001 C CNN
+F 3 "" H 7300 3350 50  0001 C CNN
+	1    7300 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5F5F58B0
+P 7300 4050
+F 0 "#PWR03" H 7300 3800 50  0001 C CNN
+F 1 "GND" H 7305 3877 50  0000 C CNN
+F 2 "" H 7300 4050 50  0001 C CNN
+F 3 "" H 7300 4050 50  0001 C CNN
+	1    7300 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Small D1
+U 1 1 5F5F6353
+P 7300 3550
+F 0 "D1" V 7254 3648 50  0000 L CNN
+F 1 "RED" V 7345 3648 50  0000 L CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7300 3550 50  0001 C CNN
+F 3 "~" V 7300 3550 50  0001 C CNN
+	1    7300 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5F5F7D02
+P 7300 3850
+F 0 "R1" H 7359 3896 50  0000 L CNN
+F 1 "10K" H 7359 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7300 3850 50  0001 C CNN
+F 3 "~" H 7300 3850 50  0001 C CNN
+	1    7300 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 4050 7300 3950
+Wire Wire Line
+	7300 3750 7300 3650
+Wire Wire Line
+	7300 3450 7300 3350
+$EndSCHEMATC
